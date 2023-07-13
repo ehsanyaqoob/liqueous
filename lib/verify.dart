@@ -1,8 +1,27 @@
 import 'package:flutter/material.dart';
-// signUp Screen
 
-class VerifyScreen extends StatelessWidget {
+// verification Screen
+class VerifyScreen extends StatefulWidget {
   @override
+  State<VerifyScreen> createState() => _VerifyScreenState();
+}
+
+class _VerifyScreenState extends State<VerifyScreen> {
+  // for curser behaviour that it will move to next
+  TextEditingController _controller1 = TextEditingController();
+  TextEditingController _controller2 = TextEditingController();
+  TextEditingController _controller3 = TextEditingController();
+  TextEditingController _controller4 = TextEditingController();
+
+  @override
+  void dispose() {
+    _controller1.dispose();
+    _controller2.dispose();
+    _controller3.dispose();
+    _controller4.dispose();
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -12,9 +31,10 @@ class VerifyScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Container(
-            margin: const EdgeInsets.all(70),
-            alignment: Alignment.topCenter,
-            child: Column(children: [
+          margin: const EdgeInsets.all(70),
+          alignment: Alignment.topCenter,
+          child: Column(
+            children: [
               Text(
                 'Verify Your Mobile',
                 style: TextStyle(
@@ -43,12 +63,18 @@ class VerifyScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: TextFormField(
+                      controller: _controller1,
                       keyboardType: TextInputType.number,
                       maxLength: 1,
                       decoration: InputDecoration(
                         hintText: '-',
                         counterText: '',
                       ),
+                      onChanged: (value) {
+                        if (value.isNotEmpty) {
+                          FocusScope.of(context).nextFocus();
+                        }
+                      },
                     ),
                   ),
                   SizedBox(
@@ -56,38 +82,58 @@ class VerifyScreen extends StatelessWidget {
                   ),
                   Expanded(
                     child: TextFormField(
-                      keyboardType: TextInputType.number,
-                      maxLength: 1,
-                      decoration: InputDecoration(
-                        hintText: '-',
-                        counterText: '',
-                      ),
-                    ),
+                        controller: _controller2,
+                        keyboardType: TextInputType.number,
+                        maxLength: 1,
+                        decoration: InputDecoration(
+                          hintText: '-',
+                          counterText: '',
+                        ),
+                        onChanged: (value) {
+                          if (value.isNotEmpty) {
+                            FocusScope.of(context).nextFocus();
+                          } else {
+                            FocusScope.of(context).previousFocus();
+                          }
+                        }),
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   Expanded(
                     child: TextFormField(
-                      keyboardType: TextInputType.number,
-                      maxLength: 1,
-                      decoration: InputDecoration(
-                        hintText: '-',
-                        counterText: '',
-                      ),
-                    ),
+                        controller: _controller3,
+                        keyboardType: TextInputType.number,
+                        maxLength: 1,
+                        decoration: InputDecoration(
+                          hintText: '-',
+                          counterText: '',
+                        ),
+                        onChanged: (value) {
+                          if (value.isNotEmpty) {
+                            FocusScope.of(context).nextFocus();
+                          } else {
+                            FocusScope.of(context).previousFocus();
+                          }
+                        }),
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   Expanded(
                     child: TextFormField(
+                      controller: _controller4,
                       keyboardType: TextInputType.number,
                       maxLength: 1,
                       decoration: InputDecoration(
                         hintText: '-',
                         counterText: '',
                       ),
+                      onChanged: (value) {
+                        if (value.isEmpty) {
+                          FocusScope.of(context).previousFocus();
+                        }
+                      },
                     ),
                   ),
                   SizedBox(
@@ -103,7 +149,8 @@ class VerifyScreen extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    //
+                    // it will move after verification to home page
+                    Navigator.pushNamed(context, '/home');
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
@@ -113,7 +160,9 @@ class VerifyScreen extends StatelessWidget {
                   child: Text('verify'),
                 ),
               ),
-            ])),
+            ],
+          ),
+        ),
       ),
     );
   }
