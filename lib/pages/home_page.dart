@@ -1,17 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design/User/user_messages.dart';
+import 'package:ui_design/pages/profile_page.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+import '../User/user_analytics.dart';
+import '../User/user_notification.dart';
+import '../User/user_home.dart';
+import '../User/user_search.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomePageState extends State<HomePage> {
+  // naviigate around the buttom nav bar
+  int _selectedIndex = 0;
+  int _currentIndex = 0;
+  void _navigateButtonNavBar(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  // diff pages to navigate
+  final List<Widget> _children = [
+    UserHome(),
+    UserSearch(),
+    UserAnalytics(),
+    UserNotification(),
+    UserMessages(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      endDrawer: Drawer(
+      drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -42,8 +67,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             ListTile(
               leading: Icon(Icons.person),
-              title: Text('Profile'),
+              title: Text('Account'),
               onTap: () {
+                Navigator.pushNamed(context, '/Account');
+
                 //
               },
             ),
@@ -51,6 +78,8 @@ class _HomeScreenState extends State<HomeScreen> {
               leading: Icon(Icons.settings),
               title: Text('Settings'),
               onTap: () {
+                Navigator.pushNamed(context, '/Settings');
+
                 //
               },
             ),
@@ -59,17 +88,18 @@ class _HomeScreenState extends State<HomeScreen> {
               title: Text('Dashboard'),
               onTap: () {
                 //
+                Navigator.pushNamed(context, '/Dashboard');
               },
             ),
             ListTile(
               leading: Icon(Icons.logout),
               title: Text('Logout'),
               onTap: () {
-                // TODO: Implement logout logic
+                Navigator.pushNamed(context, '/Logout');
               },
             ),
             SizedBox(
-              height: 270,
+              height: 250,
             ),
             ListTile(
               leading: Icon(Icons.merge_outlined),
@@ -81,7 +111,27 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      appBar: AppBar(),
+      //
+      appBar: AppBar(
+        title: Text('HomePage'),
+        centerTitle: true,
+      ),
+      // now body of homepage
+      body: _children[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: _navigateButtonNavBar,
+        type: BottomNavigationBarType.fixed,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.analytics_sharp), label: 'analytics'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.notification_important), label: 'notification'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.message_rounded), label: 'Messages'),
+        ],
+      ),
     );
   }
 }
