@@ -31,43 +31,100 @@ class _HomePageState extends State<HomePage> {
     UserAnalytics(),
     UserNotification(),
     UserMessages(),
+    // lsit for other content of the body
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: Icon(
+                Icons.menu,
+                color: Colors.grey,
+              ),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+            );
+          },
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.dark_mode_rounded,
+              color: Colors.grey,
+            ),
+            onPressed: () {},
+          ),
+          SizedBox(
+            width: 7.0,
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.notification_add,
+              color: Colors.grey,
+            ),
+            onPressed: () {},
+          ),
+          SizedBox(
+            width: 7.0,
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.person,
+              color: Colors.grey,
+            ),
+            onPressed: () {},
+          ),
+        ],
+      ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue[400],
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CircleAvatar(
-                    radius: 45,
-                    backgroundImage: AssetImage('images/nft.jpg'),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    'Liqueous',
-                    style: TextStyle(
-                      fontSize: 28,
-                      color: Colors.white,
+            Padding(
+              padding: const EdgeInsets.all(0.0),
+              child: DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue[400],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CircleAvatar(
+                      radius: 45,
+                      backgroundImage: AssetImage('images/nft.jpg'),
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Liqueous',
+                      style: TextStyle(
+                        fontFamily: 'Roboto-Bold.ttf',
+                        fontSize: 25,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             ListTile(
               leading: Icon(Icons.person),
-              title: Text('Account'),
+              title: Text(
+                'Account',
+                style: TextStyle(
+                  fontFamily: 'Roboto-Bold.ttf',
+                  fontSize: 20,
+                  color: Colors.grey,
+                ),
+              ),
               onTap: () {
                 Navigator.pushNamed(context, '/Account');
 
@@ -76,7 +133,14 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.settings),
-              title: Text('Settings'),
+              title: Text(
+                'Settings',
+                style: TextStyle(
+                  fontFamily: 'Roboto-Bold.ttf',
+                  fontSize: 20,
+                  color: Colors.grey,
+                ),
+              ),
               onTap: () {
                 Navigator.pushNamed(context, '/Settings');
 
@@ -85,7 +149,14 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.dashboard),
-              title: Text('Dashboard'),
+              title: Text(
+                'Dashboard',
+                style: TextStyle(
+                  fontFamily: 'Roboto-Bold.ttf',
+                  fontSize: 20,
+                  color: Colors.grey,
+                ),
+              ),
               onTap: () {
                 //
                 Navigator.pushNamed(context, '/Dashboard');
@@ -93,7 +164,14 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.logout),
-              title: Text('Logout'),
+              title: Text(
+                'Logout',
+                style: TextStyle(
+                  fontFamily: 'Roboto-Bold.ttf',
+                  fontSize: 20,
+                  color: Colors.grey,
+                ),
+              ),
               onTap: () {
                 Navigator.pushNamed(context, '/Logout');
               },
@@ -103,18 +181,20 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.merge_outlined),
-              title: Text('Version'),
+              title: Text(
+                'Version',
+                style: TextStyle(
+                  fontFamily: 'Roboto-Bold.ttf',
+                  fontSize: 20,
+                  color: Colors.grey,
+                ),
+              ),
               onTap: () {
                 // TODO: Navigate to settings screen
               },
             ),
           ],
         ),
-      ),
-      //
-      appBar: AppBar(
-        title: Text('HomePage'),
-        centerTitle: true,
       ),
       // now body of homepage
       body: _children[_selectedIndex],

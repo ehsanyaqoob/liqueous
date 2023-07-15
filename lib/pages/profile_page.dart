@@ -7,12 +7,26 @@ class AccountPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Account'),
+        title: Text(
+          'Account',
+          style: TextStyle(
+            fontFamily: 'Roboto-Bold.ttf',
+            fontSize: 20,
+            color: Colors.grey,
+          ),
+        ),
       ),
       body: Center(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text('Your Name')])),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Text(
+          'Your Name',
+          style: TextStyle(
+            fontFamily: 'Roboto-Bold.ttf',
+            fontSize: 20,
+            color: Colors.grey,
+          ),
+        )
+      ])),
     );
   }
 }

@@ -7,12 +7,26 @@ class LogOutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Logout'),
+        title: Text(
+          'Logout',
+          style: TextStyle(
+            fontFamily: 'Roboto-Bold.ttf',
+            fontSize: 20,
+            color: Colors.grey,
+          ),
+        ),
       ),
       body: Center(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text('Logout')])),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Text(
+          'Logout',
+          style: TextStyle(
+            fontFamily: 'Roboto-Bold.ttf',
+            fontSize: 20,
+            color: Colors.grey,
+          ),
+        )
+      ])),
     );
   }
 }

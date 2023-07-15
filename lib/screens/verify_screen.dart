@@ -25,7 +25,14 @@ class _VerifyScreenState extends State<VerifyScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Verification'),
+        title: Text(
+          'Verification',
+          style: TextStyle(
+            fontFamily: 'Roboto-Bold.ttf',
+            fontSize: 20,
+            color: Colors.white,
+          ),
+        ),
         centerTitle: true,
       ),
       body: Padding(
@@ -38,6 +45,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               Text(
                 'Verify Your Mobile',
                 style: TextStyle(
+                  fontFamily: 'Roboto-Bold.ttf',
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
@@ -49,6 +57,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               Text(
                 'Sign in to your account',
                 style: TextStyle(
+                  fontFamily: 'Roboto-Bold.ttf',
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Colors.grey,
@@ -157,7 +166,14 @@ class _VerifyScreenState extends State<VerifyScreen> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  child: Text('verify'),
+                  child: Text(
+                    'verify',
+                    style: TextStyle(
+                      fontFamily: 'Roboto-Bold.ttf',
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ),
             ],

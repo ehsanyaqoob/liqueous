@@ -7,7 +7,14 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('LogIn'),
+        title: Text(
+          'LogIn',
+          style: TextStyle(
+            fontFamily: 'Roboto-Bold.ttf',
+            fontSize: 20,
+            color: Colors.white,
+          ),
+        ),
         centerTitle: true,
         elevation: 0,
       ),
@@ -34,9 +41,9 @@ class LoginScreen extends StatelessWidget {
                     child: Text(
                       'Welcome Back,',
                       style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                      ),
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Roboto-Bold.ttf'),
                       textAlign: TextAlign.left,
                     ),
                   ),
@@ -48,6 +55,7 @@ class LoginScreen extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
+                        fontFamily: 'Roboto-Bold.ttf',
                         color: Colors.grey,
                       ),
                       textAlign: TextAlign.justify,
@@ -86,7 +94,8 @@ class LoginScreen extends StatelessWidget {
                 },
                 child: Text(
                   'Forgot your phone number?',
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(
+                      color: Colors.grey, fontFamily: 'Roboto-Bold.ttf'),
                   textAlign: TextAlign.right,
                 ),
               ),
@@ -104,7 +113,14 @@ class LoginScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                child: Text('LogIn'),
+                child: Text(
+                  'LogIn',
+                  style: TextStyle(
+                    fontFamily: 'Roboto-Bold.ttf',
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ),
               ),
             ),
             SizedBox(height: 18),
@@ -118,12 +134,14 @@ class LoginScreen extends StatelessWidget {
                     TextSpan(
                       text: 'New user?',
                       style: TextStyle(
+                        fontFamily: 'Roboto-Bold.ttf',
                         decoration: TextDecoration.underline,
                       ),
                     ),
                     TextSpan(
                       text: ' SignUp',
                       style: TextStyle(
+                        fontFamily: 'Roboto-Bold.ttf',
                         color: Colors.blue,
                       ),
                     ),

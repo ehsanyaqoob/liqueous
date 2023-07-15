@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -6,12 +7,26 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dashboard'),
+        title: Text(
+          'Dashboard',
+          style: TextStyle(
+            fontFamily: 'Roboto-Bold.ttf',
+            fontSize: 20,
+            color: Colors.grey,
+          ),
+        ),
       ),
       body: Center(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text('Your Dashboard')])),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Text(
+          'Your Dashboard',
+          style: TextStyle(
+            fontFamily: 'Roboto-Bold.ttf',
+            fontSize: 20,
+            color: Colors.grey,
+          ),
+        )
+      ])),
     );
   }
 }

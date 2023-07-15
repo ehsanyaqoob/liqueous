@@ -7,12 +7,26 @@ class SettingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings'),
+        title: Text(
+          'Settings',
+          style: TextStyle(
+            fontFamily: 'Roboto-Bold.ttf',
+            fontSize: 20,
+            color: Colors.grey,
+          ),
+        ),
       ),
       body: Center(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text('Settings')])),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Text(
+          'Settings',
+          style: TextStyle(
+            fontFamily: 'Roboto-Bold.ttf',
+            fontSize: 20,
+            color: Colors.grey,
+          ),
+        )
+      ])),
     );
   }
 }

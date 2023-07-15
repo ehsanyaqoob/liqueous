@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:ui_design/pages/logout_page.dart';
 import 'pages/dashboard_page.dart';
@@ -17,6 +18,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: GoogleFonts.poppins().fontFamily,
+        // Additional theme customization
+      ),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
