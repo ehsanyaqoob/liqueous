@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
-class SettingPage extends StatelessWidget {
-  const SettingPage({super.key});
+class TasksPage extends StatelessWidget {
+  const TasksPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Settings',
+          'Tasks',
           style: TextStyle(
             fontFamily: 'Roboto-Bold.ttf',
             fontSize: 20,
-            color: Colors.grey,
+            color: Colors.white,
           ),
         ),
       ),
       body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Text(
-          'Settings',
+          'Tasks Center',
           style: TextStyle(
             fontFamily: 'Roboto-Bold.ttf',
             fontSize: 20,

@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
-class AccountPage extends StatelessWidget {
-  const AccountPage({super.key});
+class RequestsPage extends StatelessWidget {
+  const RequestsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Account',
+          'Requests',
           style: TextStyle(
             fontFamily: 'Roboto-Bold.ttf',
             fontSize: 20,
-            color: Colors.grey,
+            color: Colors.white,
           ),
         ),
       ),
       body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Text(
-          'Your Name',
+          'Requests',
           style: TextStyle(
             fontFamily: 'Roboto-Bold.ttf',
             fontSize: 20,

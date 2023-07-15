@@ -12,7 +12,7 @@ class DashboardPage extends StatelessWidget {
           style: TextStyle(
             fontFamily: 'Roboto-Bold.ttf',
             fontSize: 20,
-            color: Colors.grey,
+            color: Colors.white,
           ),
         ),
       ),

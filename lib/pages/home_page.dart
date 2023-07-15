@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design/User/user_messages.dart';
-import 'package:ui_design/pages/profile_page.dart';
-
+import 'package:ui_design/pages/requests_page.dart';
 import '../User/user_analytics.dart';
 import '../User/user_notification.dart';
 import '../User/user_home.dart';
@@ -116,38 +115,6 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.person),
-              title: Text(
-                'Account',
-                style: TextStyle(
-                  fontFamily: 'Roboto-Bold.ttf',
-                  fontSize: 20,
-                  color: Colors.grey,
-                ),
-              ),
-              onTap: () {
-                Navigator.pushNamed(context, '/Account');
-
-                //
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text(
-                'Settings',
-                style: TextStyle(
-                  fontFamily: 'Roboto-Bold.ttf',
-                  fontSize: 20,
-                  color: Colors.grey,
-                ),
-              ),
-              onTap: () {
-                Navigator.pushNamed(context, '/Settings');
-
-                //
-              },
-            ),
-            ListTile(
               leading: Icon(Icons.dashboard),
               title: Text(
                 'Dashboard',
@@ -160,6 +127,36 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 //
                 Navigator.pushNamed(context, '/Dashboard');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.request_page_sharp),
+              title: Text(
+                'Requests',
+                style: TextStyle(
+                  fontFamily: 'Roboto-Bold.ttf',
+                  fontSize: 20,
+                  color: Colors.grey,
+                ),
+              ),
+              onTap: () {
+                //
+                Navigator.pushNamed(context, '/Requests');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.dashboard),
+              title: Text(
+                'Tasks Center',
+                style: TextStyle(
+                  fontFamily: 'Roboto-Bold.ttf',
+                  fontSize: 20,
+                  color: Colors.grey,
+                ),
+              ),
+              onTap: () {
+                //
+                Navigator.pushNamed(context, '/Tasks');
               },
             ),
             ListTile(
