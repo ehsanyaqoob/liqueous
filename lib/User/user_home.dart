@@ -629,9 +629,9 @@ class UserHome extends StatelessWidget {
                     Row(
                       children: [
                         Icon(Icons.analytics, color: Colors.grey),
-                        SizedBox(width: 10),
+                        SizedBox(width: 8),
                         Text(
-                          'LTRY-Lottery.com lnc. Common\nStock',
+                          'LTRY-Lottery.com lnc.Common\nStock',
                           style: TextStyle(
                             color: Colors.grey,
                             fontFamily: 'Roboto-Bold.ttf',
@@ -644,8 +644,7 @@ class UserHome extends StatelessWidget {
                     SizedBox(height: 20.0),
                     Row(
                       children: [
-                        Text(
-                            '_________________________________________________________',
+                        Text('             ________________________________',
                             style: TextStyle(
                               fontFamily: 'Roboto-Bold.ttf',
                               color: Colors.grey,
@@ -688,9 +687,9 @@ class UserHome extends StatelessWidget {
                     Row(
                       children: [
                         Icon(Icons.maps_home_work, color: Colors.grey),
-                        SizedBox(width: 10),
+                        SizedBox(width: 8),
                         Text(
-                          'LTRY-Lottery.com lnc. Common\nStock',
+                          'LTRY-Lottery.com lnc.Common\nStock',
                           style: TextStyle(
                             color: Colors.grey,
                             fontFamily: 'Roboto-Bold.ttf',
@@ -703,8 +702,7 @@ class UserHome extends StatelessWidget {
                     SizedBox(height: 20.0),
                     Row(
                       children: [
-                        Text(
-                            '_________________________________________________________',
+                        Text('           ________________________________',
                             style: TextStyle(
                               color: Colors.grey,
                               fontFamily: 'Roboto-Bold.ttf',
@@ -732,7 +730,7 @@ class UserHome extends StatelessWidget {
                     Row(
                       children: [
                         Icon(Icons.analytics, color: Colors.grey),
-                        SizedBox(width: 10),
+                        SizedBox(width: 8),
                         Text(
                           '\$124,000.00',
                           style: TextStyle(
@@ -747,9 +745,9 @@ class UserHome extends StatelessWidget {
                     Row(
                       children: [
                         Icon(Icons.maps_home_work, color: Colors.grey),
-                        SizedBox(width: 10),
+                        SizedBox(width: 8),
                         Text(
-                          'LTRY-Lottery.com lnc. Common\nStock',
+                          'LTRY-Lottery.com lnc.Common\nStock',
                           style: TextStyle(
                             color: Colors.grey,
                             fontFamily: 'Roboto-Bold.ttf',
@@ -762,8 +760,7 @@ class UserHome extends StatelessWidget {
                     SizedBox(height: 20.0),
                     Row(
                       children: [
-                        Text(
-                            '_________________________________________________________',
+                        Text('           ________________________________',
                             style: TextStyle(
                               color: Colors.grey,
                               fontFamily: 'Roboto-Bold.ttf',
@@ -804,9 +801,9 @@ class UserHome extends StatelessWidget {
                     Row(
                       children: [
                         Icon(Icons.maps_home_work, color: Colors.grey),
-                        SizedBox(width: 10),
+                        SizedBox(width: 8),
                         Text(
-                          'LTRY-Lottery.com lnc. Common\nStock',
+                          'LTRY-Lottery.com lnc.Common\nStock',
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 18,
